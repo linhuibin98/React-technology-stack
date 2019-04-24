@@ -1,5 +1,7 @@
 import React from 'react';
-import ReactDOM, { render } from 'react-dom'; 
+import ReactDOM from 'react-dom';
+import './self-JSX'
+
 //从react-dom中导入一个ReactDom，逗号后面的内容是把ReactDom对象进行解构
 
 /**
@@ -31,7 +33,8 @@ import ReactDOM, { render } from 'react-dom';
   */
 
 let data = [{name: 'lll'}, {name: 'hhh'}, {name: 'bbb'}];
-let root = document.querySelector('#root');
+let root = document.querySelector('#root'); 
+
 
 
 /*
@@ -50,11 +53,3 @@ ReactDOM.render(
   console.log('1111');
 });
 */
-
-ReactDOM.render(
-  <div id='box' className='box' style={{color: 'red'}}>
-    <h1>我是标题</h1>
-  </div>
-  , root, () => {
-    console.log('1111');
-  });
