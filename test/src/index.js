@@ -1,6 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './self-JSX'
+import ReactDOM, {render} from 'react-dom';
+// import './self-JSX'
+import Dialog from './Dialog';
+
+
+let data = [{name: 'lll'}, {name: 'hhh'}, {name: 'bbb'}];
+let root = document.querySelector('#root'); 
 
 //从react-dom中导入一个ReactDom，逗号后面的内容是把ReactDom对象进行解构
 
@@ -32,10 +37,17 @@ import './self-JSX'
   * 3. ReactDom.render(Jsx语法最后生成的对象，容器)，基于Render方法把生成的对象动态创建为Dom元素，插入到指定容器中
   */
 
-let data = [{name: 'lll'}, {name: 'hhh'}, {name: 'bbb'}];
-let root = document.querySelector('#root'); 
 
 
+//知识点
+/**
+ *  createElement在处理组件的时候，返回的对象中：type就不在是字符串标签名了，而是一个函数（类），但属性还是在props中
+ * 
+ */
+
+render(<div>
+    <Dialog text="你好"></Dialog>
+  </div>, root)
 
 /*
 ReactDOM.render(
