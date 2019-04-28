@@ -1,9 +1,22 @@
 import React from 'react';
 import ReactDOM, {render} from 'react-dom';
 // import './self-JSX'
-import Dialog from './components/Dialog';
+// import Dialog from './components/Dialog';
 //bootstrap
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
+
+// 基于类创建组件
+class Dialog extends React.Component {
+  constructor() {
+    super();
+    return
+  }
+  render() {
+    return <section>
+      <h3>系统提示</h3>
+    </section>
+  }
+}
 
 
 let data = [{name: 'lll'}, {name: 'hhh'}, {name: 'bbb'}];
