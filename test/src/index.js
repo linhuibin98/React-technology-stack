@@ -4,18 +4,28 @@ import ReactDOM, {render} from 'react-dom';
 // import Dialog from './components/Dialog';
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
+import PropTypes from 'prop-types'
 
 // 基于类创建组件
 class Dialog extends React.Component {
+  /**
+   * this.props是只读的，我们无法在方法中修改它的值，但是可以给其设置默认值或者一些规则
+   * 例如：设置是否是必须传递的以及传递的类型等
+   */
+  static defaultProps = {
+    "lx": '系统提示'
+  };
+
   constructor() {
     super();
-    return
-  }
+    return;
+  };
+
   render() {
     return <section>
       <h3>系统提示</h3>
     </section>
-  }
+  };
 }
 
 
