@@ -1,5 +1,5 @@
 import React from 'react';
-//组件中需要调用react， React.createElement()方法
+//组件中需要调用react, React.createElement()方法
 
 export default function dialog(props) {
   let {text, children} = props;

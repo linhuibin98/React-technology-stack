@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM, {render} from 'react-dom';
 // import './self-JSX'
-import Dialog from './Dialog';
+import Dialog from './components/Dialog';
+//bootstrap
+import 'bootstrap/dist/css/bootstrap.css'
 
 
 let data = [{name: 'lll'}, {name: 'hhh'}, {name: 'bbb'}];
@@ -46,7 +48,16 @@ let root = document.querySelector('#root');
  */
 
 render(<div>
-    <Dialog text="你好"></Dialog>
+    {/* 注释：JSX中调取组件，只需要把组件当做一个标签调取使用即可（单闭合和双闭合都可以） */}
+    <Dialog type='请登录' content='sadsd'>
+    <div>
+      <input type='text' className='form-control' placeholder='请输入用户名'></input>
+      <br />
+      <input type='password' className='form-control' placeholder='请输入密码'></input>
+    </div>
+    <button className="btn btn-danger">登录</button>
+    <button className="btn btn-danger">取消</button>
+    </Dialog>
   </div>, root)
 
 /*
