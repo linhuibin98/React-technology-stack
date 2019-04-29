@@ -20,7 +20,7 @@ setInterval(() => {
 }, 1000);
 */
 
-//类 式组件
+//创建 类 式组件
 class GetTime extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +29,14 @@ class GetTime extends React.Component {
       time: new Date().toLocaleString()
     }
     return;
+  }
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        time: new Date().toLocaleString()
+      })
+    }, 1000)
   }
 
   
