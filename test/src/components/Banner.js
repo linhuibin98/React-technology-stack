@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// 使用context, 在组件中传递属性信息
+
 class Head extends React.Component {
   static contextTypes = {
     title: PropTypes.string
