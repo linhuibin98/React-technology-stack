@@ -6,7 +6,7 @@ import Banner from './components/Banner.js'
 
 const root = document.querySelector('#root');
 
-ReactDom.render(<Banner></Banner>, root)
+ReactDom.render(<Banner></Banner>, root);
 
 
 
