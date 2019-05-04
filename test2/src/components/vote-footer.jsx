@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import action from '../store/action';
 
 export default class VoteFooter extends Component {
   render() {
@@ -6,14 +7,10 @@ export default class VoteFooter extends Component {
     return (
       <div className='panel-footer'>
         <button className='btn btn-success' style={{marginRight: '20px'}} onClick={() => {
-          dispatch({
-            type: 'support'
-          })
+          dispatch(action.vote.suppot());
         }}>支持</button>
         <button className='btn btn-danger' onClick={() => {
-          dispatch({
-            type: 'reject'
-          })
+          dispatch(action.vote.reject());
         }}>反对</button>
       </div>
     )

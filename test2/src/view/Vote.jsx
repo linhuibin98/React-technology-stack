@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import VoteHead from '../components/Vote-head';
 import VoteBody from '../components/Vote-body';
 import VoteFooter from '../components/vote-footer';
@@ -7,6 +7,10 @@ import VoteFooter from '../components/vote-footer';
 export default class Vote extends Component {
   static defaultProps = {
     title: '巴西 VS 德国：巴西必胜！！！'
+  }
+
+  static propTypes = {
+    title: PropTypes.string
   }
 
   constructor(props) {
