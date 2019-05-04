@@ -18,13 +18,16 @@ export default class Vote extends Component {
   }
 
   render() {
-    let {store, title} = this.props;
+    let {title} = this.props;
     return (
       <section className='panel panel-default' style={{width: '50%'}}>
         <VoteHead title={title}></VoteHead>
-        <VoteBody store={store}></VoteBody>
-        <VoteFooter store={store}></VoteFooter>
+        <VoteBody></VoteBody>
+        <VoteFooter></VoteFooter>
       </section>
     )
   }
 }
+
+
+
