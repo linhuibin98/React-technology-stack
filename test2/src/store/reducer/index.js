@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
-import vote from './vote'
+import vote from './vote';
+import todo from './todo';
 
 const reducer = combineReducers({
-  vote
+  vote,
+  todo
 });
 
 export default reducer;

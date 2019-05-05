@@ -1,0 +1,47 @@
+.panel {
+  margin: 20px auto;
+  width: 500px;
+
+  .panel-title {
+    color: deepskyblue;
+    margin-bottom: 15px;
+    
+    .task-title {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .count {
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  .list-group-item {
+    position: relative;
+
+    input {
+      vertical-align: top;
+    }
+
+    .rask-name {
+      margin-left: 10px;
+      &.complete {
+        text-decoration: line-through;
+      }
+    }
+
+    a {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    &:hover {
+      a {
+        display: block;
+      }
+    }
+  }
+}

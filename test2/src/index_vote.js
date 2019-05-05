@@ -3,8 +3,7 @@ import ReactDom from 'react-dom';
 import {Provider} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.css';
 import store from './store';
-import Todo from './view/todo';
-import './static/index.less';
+import Vote from './view/Vote.jsx'
 
 const root = document.querySelector('#root');
 
@@ -13,7 +12,7 @@ const root = document.querySelector('#root');
 ReactDom.render((
   <Provider store={store}>
     <div>
-      <Todo></Todo>
+      <Vote></Vote>
     </div>
   </Provider>
 ), root);
