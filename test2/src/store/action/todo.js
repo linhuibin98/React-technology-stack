@@ -6,6 +6,12 @@ let todo = {
       type: types.TODO_ADD,
       payload
     }
+  },
+  toggleTab(flag) {
+    return {
+      type: types.TODO_TAB,
+      flag
+    }
   }
 };
 
