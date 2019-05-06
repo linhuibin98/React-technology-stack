@@ -39,9 +39,11 @@ class TodoBody extends Component {
                   } />
                   <span className={clasName}>{name}</span>
                   <a href="javascript:void(0)" style={{background: 'red', color: '#fff', fontSize: '12px'}} onClick={ (ev) => {
-                    this.props.removeState({
-                      id
-                    })
+                    if (window.confirm('删除后不可恢复，确定删除吗？')) {
+                      this.props.removeState({
+                        id
+                      })
+                    }
                   }}>删</a>
                 </li>
               )
