@@ -12,6 +12,12 @@ let todo = {
       type: types.TODO_TAB,
       flag
     }
+  },
+  updateState(newState) {
+    return {
+      type: types.TODO_UPDATE_STATE,
+      newState
+    }
   }
 };
 

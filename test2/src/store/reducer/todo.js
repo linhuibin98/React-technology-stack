@@ -8,14 +8,15 @@ export default function reducer(state = {data: [], flag: 'all'}, action) {
       state.data.push(payload);
       break; 
     case types.TODO_TAB:
-      state.data = state.data.filter(item => {
-        if (action.flag === 'complete') {
-          return parseFloat(item.state) === 1;
-        } else if (action.flag === 'uncomplete') {
-          return parseFloat(item.state) === 0;
-        }
-      })
       state.flag = action.flag;
+      break;
+    case types.TODO_UPDATE_STATE:
+      let it = state.data.find((item, index) => {
+        return item.id === action.newState.id;
+      })
+      if (it) {
+        it.state = action.newState.newState;
+      }
       break;
     default: 
       break;
