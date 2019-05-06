@@ -18,6 +18,10 @@ export default function reducer(state = {data: [], flag: 'all'}, action) {
         it.state = action.newState.newState;
       }
       break;
+    case types.TODO_REMOVE_STATE:
+      let {current} = action;
+      state.data = state.data.filter((item) => item.id !== current.id);
+      break;
     default: 
       break;
   }

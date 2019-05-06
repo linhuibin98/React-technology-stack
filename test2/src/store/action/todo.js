@@ -18,6 +18,12 @@ let todo = {
       type: types.TODO_UPDATE_STATE,
       newState
     }
+  },
+  removeState(current) {
+    return {
+      type: types.TODO_REMOVE_STATE,
+      current
+    }
   }
 };
 
