@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch, Redirect} from 'react-router-dom';
 import A from './components/A';
 import B from './components/B';
 
@@ -28,8 +28,11 @@ const root = document.querySelector('#root');
   * 
   */
 
-// Route的属性
+
 /**
+ * Route
+ * 
+ * 属性
  * path: 匹配路径
  * component: 匹配渲染的组件
  * render: func  , 当访问路径匹配时，会调用该方法，一般用于“权限校验”（渲染组件之前验证是否存在权限， 做一些特殊处理）
@@ -42,8 +45,10 @@ ReactDom.render((
     <Switch>
       <Route path= '/' exact component={ A } />
       <Route path= '/user' render={() => {
-        return '权限不足！！！'
+        return <B />
       }} />
+      <Redirect from= '/a' to= '/b' />
+      <Route path= '/b' component={ B } />
     </Switch>
   </HashRouter>
 ), root);
