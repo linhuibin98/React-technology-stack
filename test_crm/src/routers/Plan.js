@@ -10,7 +10,7 @@ export class Plan extends Component {
   render() {
     return (
       <div>
-        
+        plan
       </div>
     )
   }

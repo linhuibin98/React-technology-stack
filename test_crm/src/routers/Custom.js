@@ -10,7 +10,7 @@ export class Custom extends Component {
   render() {
     return (
       <div>
-        
+        custom
       </div>
     )
   }
