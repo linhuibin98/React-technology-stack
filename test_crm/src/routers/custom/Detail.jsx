@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-export class Custom extends Component {
+export class Detail extends Component {
   static propTypes = {
     prop: PropTypes
   }
@@ -10,7 +10,9 @@ export class Custom extends Component {
   render() {
     return (
       <div>
-        custom
+        编号：1
+        <br />
+        姓名：xxx
       </div>
     )
   }
@@ -24,5 +26,4 @@ const mapDispatchToProps = {
   
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Custom)
-
+export default connect(mapStateToProps, mapDispatchToProps)(Detail)

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-export class Home extends Component {
+export class List extends Component {
   static propTypes = {
     prop: PropTypes
   }
@@ -10,7 +10,7 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        我是首页
+        List
       </div>
     )
   }
@@ -24,4 +24,4 @@ const mapDispatchToProps = {
   
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(List)

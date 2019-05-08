@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Nav extends Component {
   render() {
@@ -7,19 +8,19 @@ class Nav extends Component {
       <div className='navbar navbar-default'>
         {/* LOGO */} 
         <div className='container-fluid col-md-2'>
-          <a className='navbar-brand' herf='javascrip:void(0)'>CRM管理系统</a>
+          <Link className='navbar-brand' to='/'>CRM管理系统</Link>
         </div>
         {/* NAV */}
         <div className='collapse navbar-collapse col-md-10'>
           <ul className='nav navbar-nav'>
             <li>
-              <a herf='javascript:void(0)'>首页</a>
+              <Link to='/'>首页</Link>
             </li>
             <li>
-              <a herf='javascript:void(0)'>客户管理</a>
+              <Link to='/custom'>客户管理</Link>
             </li>
             <li>
-              <a herf='javascript:void(0)'>计划管理</a>
+              <Link to='/plan'>计划管理</Link>
             </li>
           </ul>
         </div>
