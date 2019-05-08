@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 export class Create extends Component {
 
   render() {
+    console.log(this.props)
     return (
       <div className='col-md-3'>
         <form className="form-block">
