@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
 import store from './store';
+
+//css
 import 'bootstrap/dist/css/bootstrap.css';
+import './static/css/common.css';
 
 //routes
 import Home from './routers/Home';

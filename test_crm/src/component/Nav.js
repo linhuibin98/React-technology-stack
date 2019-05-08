@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 class Nav extends Component {
   render() {
@@ -14,13 +14,13 @@ class Nav extends Component {
         <div className='collapse navbar-collapse col-md-10'>
           <ul className='nav navbar-nav'>
             <li>
-              <Link to='/'>首页</Link>
+              <NavLink to='/' exact>首页</NavLink>
             </li>
             <li>
-              <Link to='/custom'>客户管理</Link>
+              <NavLink to='/custom'>客户管理</NavLink>
             </li>
             <li>
-              <Link to='/plan'>计划管理</Link>
+              <NavLink to='/plan'>计划管理</NavLink>
             </li>
           </ul>
         </div>
