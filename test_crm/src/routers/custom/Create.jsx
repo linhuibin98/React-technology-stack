@@ -16,7 +16,7 @@ export class Create extends Component {
             <label htmlFor="exampleInputPassword3">用户姓名</label>
             <input type="password" className="form-control" id="exampleInputPassword3" placeholder="username" />
           </div>
-          <button type="submit" className="btn btn-warning">添加</button>
+          <button className="btn btn-warning">添加</button>
         </form>
       </div>
     )

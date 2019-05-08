@@ -1,9 +1,10 @@
 import * as types from '../action-types';
 
 let custom = {
-  add() {
+  add(payload) {
     return {
-      type: types.CUSTOM_ADD
+      type: types.CUSTOM_CREATE,
+      payload
     }
   }
 }
