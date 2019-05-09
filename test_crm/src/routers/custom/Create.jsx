@@ -1,34 +1,39 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import action from '../../store/action';
 
 export class Create extends Component {
-
+  
   render() {
-    console.log(this.props)
     return (
       <div className='col-md-3'>
-        <form className="form-block">
           <div className="form-group">
-            <label htmlFor="exampleInputEmail3">用户编号</label>
-            <input type="email" className="form-control" id="exampleInputEmail3" placeholder="id" />
+            <label>用户编号</label>
+            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="id"  ref='user_id'/>
           </div>
           <div className="form-group">
-            <label htmlFor="exampleInputPassword3">用户姓名</label>
-            <input type="password" className="form-control" id="exampleInputPassword3" placeholder="username" />
+            <label>用户姓名</label>
+            <input type="text" className="form-control" id="exampleInputPassword3" placeholder="username" ref='user_name'/>
           </div>
-          <button className="btn btn-warning">添加</button>
-        </form>
+          <button className="btn btn-warning" onClick={this.create}>添加</button>
       </div>
     )
+  }
+
+  create = () => {
+    let id = parseFloat(this.refs.user_id.value);
+    let name = this.refs.user_name.value;
+    this.props.add({
+      id,
+      name
+    });
+    this.props.history.push('/custom/list');
   }
 }
 
 const mapStateToProps = (state) => ({
-  
+
 })
 
-const mapDispatchToProps = {
-  
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Create)
+export default connect(mapStateToProps, action.custom)(Create);

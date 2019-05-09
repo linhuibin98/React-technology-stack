@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {Switch, Route, Redirect, NavLink} from 'react-router-dom';
 import  List  from './List.jsx';
-import { Create } from './Create.jsx';
-import { Detail } from './Detail.jsx';
+import  Create  from './Create.jsx';
+import  Detail  from './Detail.jsx';
 
 export class Custom extends Component {
   render() {
