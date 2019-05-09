@@ -6,6 +6,7 @@ import  Create  from './Create.jsx';
 import  Detail  from './Detail.jsx';
 
 export class Custom extends Component {
+
   render() {
     return (
       <div>
@@ -19,7 +20,7 @@ export class Custom extends Component {
           <Switch>
             <Route path='/custom/list' component={List} />
             <Route path='/custom/create' component={Create} />
-            <Route path='/custom/detail' component={Detail} />
+            <Route path='/custom/detail/:id' component={Detail} />
             <Redirect from='/custom' to='/custom/list' />
           </Switch>
         </div>
