@@ -5,6 +5,7 @@ import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
 import store from './store';
 
 //css
+import './static/css/antd.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './static/css/common.css';
 

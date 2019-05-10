@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {LocaleProvider, DatePicker} from 'antd';
+
 
 export class Home extends Component {
   render() {
     return (
-      <div>
-        我是首页
-      </div>
+      <LocaleProvider>
+        <DatePicker />
+      </LocaleProvider>
     )
   }
 }
